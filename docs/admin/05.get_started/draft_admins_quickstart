@@ -1,0 +1,22 @@
+---
+title: Common admin use case
+---
+
+## yunohost
+The canonical way to install yunohost is installing yunohost on a [top domain](/core/maindomain).
+
+|Do|Don't|
+|---|---|
+|yourdomain.tdl| yunohost.yourdomain.tdl|
+
+if you installed yunohost on a subdomain :
+- in webadmin, the yunohost portal settings will be still located to yourdomain.tdl
+- the yunoohost login form will be still in yourdomain.tdl/yunohost/admin
+
+## app migration to yunohost app
+if you want to migrate from an app to a yunohost app :
+- create a testing domain MyApp.test so you can try out before sending your app to production
+- install the yunohost app and a database manager as phpmyadmin
+- give yourself access to [sftp](/admin/tutorials/sftp_on_apps).
+- import the database and rename columns
+- LDAP 
